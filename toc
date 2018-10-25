@@ -1,13 +1,17 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="simulated-instrument-analytics" audience="service" arm="3917559" href="/docs/services/simulated-instrument-analytics/index.html"}
+{: .toc subcollection="simulated-instrument-analytics" audience="service" arm="3917559" href="/docs/services/simulated-instrument-analytics/index.html" path="services/simulated-instrument-analytics"}
 Simulated Instrument Analytics
 
     {: .navgroup id="learn"}
     index.md
+    connect_services.md
+    analytics.md
+    scenarios.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    release-notes.md
     [API Reference](https://console.cloud.ibm.com/apidocs/simulated-instrument-analytics)
     {: .navgroup-end}
