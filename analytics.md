@@ -75,7 +75,7 @@ In the case of derivative securities, Exposure will represent the price * quanti
 
 ### <a id="Value"></a>Profit and Loss
 
-**Profit and Losss**, or sometimes **PnL**, represents the observed change under a scenario. Financial instruments that decline in value under a scenario will have a negative PnL, and financial instruments that appreciate will have a positive PnL.
+**Profit and Loss**, or sometimes **PnL**, represents the observed change under a scenario. Financial instruments that decline in value under a scenario will have a negative PnL, and financial instruments that appreciate will have a positive PnL.
 
 ### <a id="Return"></a>Return
 
