@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-10-26"
 
 ---
 
@@ -44,7 +44,7 @@ The following new features and changes to the service are available.
 - **Integration with {{site.data.keyword.mfd_full_notm}}** 
     - The {{site.data.keyword.siminstruanalshort}} services integrates with {{site.data.keyword.mfd_short}}. 
       If you subscribe to the {{site.data.keyword.mfd_short}} service, when you run {{site.data.keyword.siminstruanalshort}} requests, you can then retrieve financial data from the {{site.data.keyword.mfd_full_notm}} service.
-      See [Connecting {{site.data.keyword.siminstruanalshort}} to {{site.data.keyword.mfd_short}}](/docs/services/SimulatedInstrumentAnalytics/authorization.html) for more information.
+      See [Connecting to {{site.data.keyword.siminstruanalshort}}](/docs/services/simulated-instrument-analytics/connect_services.html) for more information.
 
 
 - **Combined services**

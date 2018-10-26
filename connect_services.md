@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-10-26"
 
 ---
 {:new_window: target="_blank"}
@@ -31,6 +31,7 @@ that is associated with the instance of {{site.data.keyword.mfd_full_notm}} with
 To provision an instance of {{site.data.keyword.mfd_full_notm}} or to learn more about our third-party 
 data patterns, see the IBM Cloud Catalog entry. <!-- Rob wants a link to the  IBM Cloud Catalog entry for MFD -->
 
+For more information about the {{site.data.keyword.mfd_full_notm}}, see the [{{site.data.keyword.mfd_short}} documentation](/docs/services/managed-financial-data/index.html).
 
 ## Before you begin
 
@@ -88,7 +89,7 @@ Ensure that the instance of {{site.data.keyword.siminstruanalshort}}, which you 
 
 
 
-## Calling the Service
+## Calling the service
 
 To call the service, replace `api-key` with the service key.
 
