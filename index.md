@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-11-02"
 
 ---
 {:new_window: target="_blank"}
@@ -109,7 +109,7 @@ Perhaps your use case requires multiple analytics to be computed on one or more 
 The following example shows a request for the computation of multiple analytics on a single financial instrument, which is specified by its instrument identifier:
 
 ```
-curl -X POST https://sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key : <api-key>" -H 'Content-Type: application/json'  -H 'cache-control: no-cache' -d '{ "id-list": [{ "id": "IBM", "type":"ric" }],"analytics" : "Dirty Price,Clean Price,Effective Duration,Dirty Price"}'
+curl -X POST https://sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key : <api-key>" -H 'Content-Type: application/json'  -H 'cache-control: no-cache' -d '{ "id-list": [{ "id": "IBM", "type":"ric" }],"analytics" : ["Price","Delta"]}'
 ```
 {:codeblock}
 
@@ -123,10 +123,9 @@ The following example shows a response to a successful request:
         {
             "Simulation Date": "2018/10/10",
             "Name": "INTERNATIONAL BUSINESS MACHINES ORD",
-            "Clean Price": "147.24",
+            "Price": "147.24",
             "Currency": "USD",
-            "Effective Duration": "0",
-            "Dirty Price": "147.24",
+            "Delta": "0",
             "ID": "IBM"
         }
     ]
@@ -139,7 +138,7 @@ The following example shows a response to a successful request:
 
 To request one or more analytics across multiple instruments in a single request, you must enhance the POST request to include a list of instruments.
 ```
-curl -X POST https://sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key: <api-key>" -H 'Content-Type: application/json'  -H 'cache-control: no-cache'  -d '{ "id-list": [{ "id": "IBM", "type":"ric" }, { "id": "US59022CAJ27", "type":"isin" }], "analytics" : "Dirty Price,Clean Price,Effective Duration,Dirty Price" }'
+curl -X POST https://sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key: <api-key>" -H 'Content-Type: application/json'  -H 'cache-control: no-cache'  -d '{ "id-list": [{ "id": "IBM", "type":"ric" }, { "id": "US59022CAJ27", "type":"isin" }], "analytics" : ["Dirty Price","Clean Price","Effective Duration"] }'
 ```
 {:codeblock}
 
@@ -223,7 +222,7 @@ To use this example to test the service, replace `api-key` with your service key
 <!--To create a scenario file, you can prepare one yourself or use the [{{site.data.keyword.predmarketscenario_short}} service](/docs/services/PredictiveMarketScenarios/index.html).-->
 
 ```
-curl -X POST https://sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key: <api-key>" -H 'Content-Type: application/json'  -H 'cache-control: no-cache' -d '{ "id-list": [{ "id": "IBM", "type":"ric" }],  "analytics" : "Dirty Price,Clean Price, Effective Duration,Scenario Set Name, Scenario Name", "ibm-scenario-set-name" : "IBM_EquityIndexShifts_AllCurves", "simulation-days" : "0,6,13,18,30" }'
+curl -X POST https://sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key: <api-key>" -H 'Content-Type: application/json'  -H 'cache-control: no-cache' -d '{ "id-list": [{ "id": "IBM", "type":"ric" }],  "analytics" : ["Dirty Price","Clean Price", "Effective Duration"],"ibm-scenario-set-name" : "IBM_EquityIndexShifts_AllCurves", "simulation-days" : [0,6,13,18,30] }'
 ```
 {:codeblock}
 
@@ -435,7 +434,7 @@ To create a scenario file, you can prepare one yourself or use the [{{site.data.
 -->
 
 ```
-curl -X POST https://sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key: <api-key>" -H 'Content-Type: application/json'  -H 'cache-control: no-cache' -d '{ "id-list": [{ "id": "IBM", "type":"ric" }],  "analytics" : "Dirty Price,Clean Price, Effective Duration", "ibm-scenario-set-name" : "IBM_EquityIndexShifts_AllCurves", "valuation-date" : "2018-08-01",  "simulation-days" : "0,13,30" }'
+curl -X POST https://sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key: <api-key>" -H 'Content-Type: application/json'  -H 'cache-control: no-cache' -d '{ "id-list": [{ "id": "IBM", "type":"ric" }],  "analytics" : ["Dirty Price","Clean Price","Effective Duration"], "ibm-scenario-set-name" : "IBM_EquityIndexShifts_AllCurves", "valuation-date" : "2018-08-01",  "simulation-days" : [0,13,30] }'
 ```
 {:codeblock}
 
@@ -589,14 +588,14 @@ This table contains 'Field Name' values that you can pass to the API for the mea
 |Macaulay Duration|THEO/Macaulay Duration|X| |X|
 |Adjusted Duration|THEO/Adjusted Duration|X| |X|
 |Effective Duration|THEO/Effective Duration|X| |X|
-|Spread Duration|THEO/Adjusted Duration2|X| |X|
+|Spread Duration|THEO/Effective Duration2|X| |X|
 |Effective Convexity|THEO/Effective Convexity|X| |X|
 |Delta|THEO/Delta| | |X|
-|Domestic Rho|THEO/Domestic Rho| | |X|
+|Rho|THEO/Domestic Rho| | |X|
 |Gamma|THEO/Gamma| | |X|
 |Theta|THEO/Theta| | |X|
 |Vega|THEO/Vega| | |X|
-|P&amp;L|POS/Unrealized Profit and Loss Theoretical|X|X|X|
+|Profit and Loss|POS/Unrealized Profit and Loss Theoretical|X|X|X|
 |Return|Theo/Value@REL(scen&time,%diff)|X|X|X|
 {: caption="Table 1. {{site.data.keyword.siminstruanalshort}} field name values" caption-side="top"}
 

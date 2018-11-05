@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-02"
 
 ---
 
@@ -141,8 +141,8 @@ Each interest rate standard shift scenario set includes the following standard s
 
 * **Twist Up** - *A relative shift in which interest rates twist around the 2-year term. Short-term rates fall by declining magnitudes until the 2-year term which experiences no change. Longer-term rates rise gradually up to the 30-year term to which a relative term increase of ~25% is applied.* 
 * **Twist Down** - *A relative shift in which interest rates twist around the 2-year term. Short-term rates rise by decreasing magnitudes until the 2-year term which experiences no change. Longer-term rates fall by increasing magnitudes up to the 30-year term to which a relative term increase of ~25% is applied.* 
-* **Butterfly Up** - *A relative shift in which interest rates twist around two curve points: the 2-year term and the 10-year term. Short-term rates fall by declining magnitudes until the 2-year term which is held constant. Medium-term rates rise with increasing magnitudes to the 5-year term, after which they begin to fall until the 10Y term which is also held constant. Long-term rates then decline with increasing magnitudes out to the 30-year term.*
-* **Butterfly Down** - *A relative shift in which interest rates twist around two curve points: the 2-year term and the 10-year term. Short-term rates rise by declining magnitudes until the 2-year term which is held constant. Medium-term rates fall with increasing magnitudes to the 5-year term, after which they begin to rise until the 10Y term which is also held constant. Long-term rates then increase with increasing magnitudes out to the 30-year term.*
+* **Butterfly Up** - *A relative shift in which interest rates twist around two curve points: the 2-year term and the 10-year term. Short-term rates fall by declining magnitudes until the 2-year term which is held constant. Medium-term rates rise with increasing magnitudes to the 5-year term, after which they begin to fall until the 10-year term which is also held constant. Long-term rates then decline with increasing magnitudes out to the 30-year term.*
+* **Butterfly Down** - *A relative shift in which interest rates twist around two curve points: the 2-year term and the 10-year term. Short-term rates rise by declining magnitudes until the 2-year term which is held constant. Medium-term rates fall with increasing magnitudes to the 5-year term, after which they begin to rise until the 10-year term which is also held constant. Long-term rates then increase with increasing magnitudes out to the 30-year term.*
 
 Interest rate curves are grouped into three types of curves: Treasury Curves, Interbank Curves, and Overnight-Index-Swap (OIS) Curves. 
 The following interet rate curves have support for interest rate standard shift scenario sets:
