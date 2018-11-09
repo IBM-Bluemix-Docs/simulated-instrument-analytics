@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -15,6 +15,7 @@ lastupdated: "2018-10-26"
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
+{:faq: data-hd-content-type='faq'}
 
 <!-- Link definitions -->
 
@@ -42,7 +43,7 @@ The following new features and changes to the service are available.
 {: #30october2018}
 
 - **Integration with {{site.data.keyword.mfd_full_notm}}** 
-    - The {{site.data.keyword.siminstruanalshort}} services integrates with {{site.data.keyword.mfd_short}}. 
+    - The {{site.data.keyword.sia_full}} service integrates with {{site.data.keyword.mfd_full}}. 
       If you subscribe to the {{site.data.keyword.mfd_short}} service, when you run {{site.data.keyword.siminstruanalshort}} requests, you can then retrieve financial data from the {{site.data.keyword.mfd_full_notm}} service.
       See [Connecting to {{site.data.keyword.siminstruanalshort}}](/docs/services/simulated-instrument-analytics/connect_services.html) for more information.
 

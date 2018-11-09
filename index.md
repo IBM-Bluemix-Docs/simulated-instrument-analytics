@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-02"
+lastupdated: "2018-11-09"
 
 ---
 {:new_window: target="_blank"}
@@ -11,11 +11,16 @@ lastupdated: "2018-11-02"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:download: .download}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:faq: data-hd-content-type='faq'}
 
 # Getting started with {{site.data.keyword.siminstruanalshort}}
 {: #getting_started_siminstruanalshort}
 
-The {{site.data.keyword.siminstruanalshort}} service leverages IBM Algorithmics' sophisticated financial models to price and compute analytics on financial securities.
+The {{site.data.keyword.sia_full}} service leverages IBM Algorithmics' sophisticated financial models to price and compute analytics on financial securities.
 {:shortdesc}
 
 The service supports the computation of securities
@@ -34,9 +39,32 @@ You must obtain access to the {{site.data.keyword.siminstruanalshort}} service a
 
 You must install cURL before you can use the service.
 
-**Important:** If you plan on using {{site.data.keyword.siminstruanalshort}} with the 
+If you plan on using {{site.data.keyword.siminstruanalshort}} with the 
 {{site.data.keyword.mfd_full_notm}} service, see [Connecting to {{site.data.keyword.mfd_short}}](/docs/services/simulated-instrument-analytics/connect_services.html) for more information on what steps you need to take.
+{:important}
 
+## Assigning access policies to users of {{site.data.keyword.siminstruanalshort}}
+
+Before you create instances of the service {{site.data.keyword.siminstruanalshort}}, assign access policies to the users of the service.
+
+In this case, the steps focus on assigning an access policy to your user name.
+
+1. In the application catalog, open the service.
+2. On the service dashboard, select **Manage** > **Access (IAM)**.
+3. Click the hyperlink for your user name. 
+
+If you're managing multiple users, you can add users to an access group and assign the access policy to the group.
+{:tip}
+
+4. Click **Access policies**.
+5. Click **Assign access** and then click **Assign access to resources**.
+6. Enter the name of your service and select the service.
+7. Under "Assign service access roles", check `Reader` and then click **Assign**.
+
+Reader access is all you require to use {{site.data.keyword.siminstruanalshort}}.
+The assigned access policy applies to all the resources of the service.
+
+If you are connecting {{site.data.keyword.siminstruanalshort}} to {{site.data.keyword.mfd_short}}, you also need to do these steps for {{site.data.keyword.mfd_short}}. 
 
 ## Getting your credentials
 
@@ -58,7 +86,7 @@ To call the service, replace `api-key` with your service key.
 The following example demonstrates the calculation of analytics on a financial security, which you specify by using an instrument identifier, under current market conditions:
 
 ```
-curl -X GET -H "X-ibm-api-key : <api-key>" -H https://sia.cloud.ibm.com/api/v2/mtm/<ID_type>?ids:<id-of-instrument>
+curl -X GET -H "X-ibm-api-key : <api-key>" -H https://sia.cloud.ibm.com/api/v2/mtm/<ID_type>?ids=<id-of-instrument>
 ```
 {:codeblock}
 

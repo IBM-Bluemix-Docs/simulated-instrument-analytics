@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-09"
 
 ---
 {:new_window: target="_blank"}
@@ -11,11 +11,16 @@ lastupdated: "2018-10-26"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:download: .download}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:faq: data-hd-content-type='faq'}
 
 # Connecting to {{site.data.keyword.mfd_short}}
 {: #connecting_to_mfd_short}
 
-The {{site.data.keyword.sia_full_notm}} can be set up to connect to the {{site.data.keyword.mfd_full_notm}}.
+The {{site.data.keyword.sia_full}} can be set up to connect to the {{site.data.keyword.mfd_full}}.
 {:shortdesc}
 
 The {{site.data.keyword.mfd_full_notm}} provides access to financial market data required when you're working with 
@@ -29,16 +34,43 @@ service directly. The {{site.data.keyword.mfd_full_notm}} supplies all of the da
 The market data that is used in calculations are provided by the third-party market data provider 
 that is associated with the instance of {{site.data.keyword.mfd_full_notm}} with which you integrated. 
 To provision an instance of {{site.data.keyword.mfd_full_notm}} or to learn more about our third-party 
-data patterns, see the IBM Cloud Catalog entry. <!-- Rob wants a link to the  IBM Cloud Catalog entry for MFD -->
+data patterns, see the IBM Cloud catalog entry. <!-- Rob wants a link to the  IBM Cloud Catalog entry for MFD -->
 
 For more information about the {{site.data.keyword.mfd_full_notm}}, see the [{{site.data.keyword.mfd_short}} documentation](/docs/services/managed-financial-data/index.html).
 
 ## Before you begin
 
 You must obtain access to the {{site.data.keyword.siminstruanalshort}} service and the {{site.data.keyword.mfd_short}} service. 
+
 To use the {{site.data.keyword.siminstruanalshort}} REST API, make sure that you understand the basics of RESTful web services and JSON representations.
 
 <!-- You must install cURL before you can use the service. -->
+
+## Assigning access policies to service users
+
+If you haven't already assigned access policies for the services {{site.data.keyword.siminstruanalshort}} and {{site.data.keyword.mfd_short}}, you do so now.
+
+Before you create instances of the services {{site.data.keyword.siminstruanalshort}} and {{site.data.keyword.mfd_short}}, assign access policies to the users of the services.
+
+Follow these steps for {{site.data.keyword.siminstruanalshort}} and {{site.data.keyword.mfd_short}}.
+In this case, the steps focus on assignings an access policy to your user name.
+
+1. In the application catalog, open the service.
+2. On the service dashboard, select **Manage** > **Access (IAM)**.
+3. Click the hyperlink for your user name. 
+
+If you're managing multiple users, you can add users to an access group and assign the access policy to the group.
+{:tip}
+
+4. Click **Access policies**.
+5. Click **Assign access** and then click **Assign access to resources**.
+6. Enter the name of your service and select the service.
+7. Under "Assign service access roles", check `Reader` and then click **Assign**.
+
+Reader access is all you require to use {{site.data.keyword.siminstruanalshort}} and {{site.data.keyword.mfd_short}}. 
+The assigned access policy applies to all the resources of the service.
+<!--For the selected user, the service is available to all instances of the service.-->
+
 
 ## Getting your credentials
 
@@ -65,6 +97,8 @@ In a later step, you will copy the API key for {{site.data.keyword.mfd_short}} s
 }
 ```
 {:codeblock}
+
+
 
 ## Authorizing {{site.data.keyword.siminstruanalshort}} to use {{site.data.keyword.mfd_short}} 
 

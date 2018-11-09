@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-02"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -15,6 +15,7 @@ lastupdated: "2018-11-02"
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
+{:faq: data-hd-content-type='faq'}
 
 <!-- Link definitions -->
 
@@ -55,7 +56,7 @@ This table contains 'Field Name' values that you can pass to the API for the mea
 |[Theta](/docs/services/simulated-instrument-analytics/analytics.html#Theta)|THEO/Theta| | |X|
 |[Vega](/docs/services/simulated-instrument-analytics/analytics.html#Vega)|THEO/Vega| | |X|
 
-{: caption="Table 1. {{site.data.keyword.siminstruanalshort}} field name values" caption-side="top"}
+{: caption="Table 1. {{site.data.keyword.sia_full}} field name values" caption-side="top"}
 
 ## Field name definitions
 

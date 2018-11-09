@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-02"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -18,6 +18,7 @@ lastupdated: "2018-11-02"
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
+{:faq: data-hd-content-type='faq'}
 
 <!-- Link definitions -->
 
@@ -58,58 +59,58 @@ Each equity standard shift scenario set includes the following standard shifts:
 
 The following Equity Indexes have support for standard shifts to equity scenarios:
 
-|Scenario Set Name|Equity Index|Equity Index Ticker|Region|
-|------------|----------|------------|------|-----------|
-|**IBM_EquityIndexShifts_AllIndexes**|*All Supported Indexes*|N/A|All|
-|**IBM_EquityIndexShifts_ADI**|*ABU DHABI SECURITIES EXCHANGE GN IDX*|ADI|EU|
-|**IBM_EquityIndexShifts_AEX**|*AMSTERDAM EXCHANGE INDEX*|AEX|EU|
-|**IBM_EquityIndexShifts_AORD**|*S&P ASX ALL ORD INDEX*|AORD|AP|
-|**IBM_EquityIndexShifts_ATG**|*AT SE GENERAL IDX*|ATG|EU|
-|**IBM_EquityIndexShifts_ATX**|*VIENNA SE AUSTRIAN TRADED IDX Index*|ATX|EU|
-|**IBM_EquityIndexShifts_BFX**|*BEL-20 INDEX*|BFX|EU|
-|**IBM_EquityIndexShifts_BSESN**|*S&P BSE SENSEX IDX*|BSESN|AP|
-|**IBM_EquityIndexShifts_BUX**|*BUDAPEST SE IDX*|BUX|EU|
-|**IBM_EquityIndexShifts_BVLG**|*PSI ALL SHARE GROSS RETURN INDEX*|BVLG|EU|
-|**IBM_EquityIndexShifts_BVSP**|*SAO PAULO SE BOVESPA INDEX*|BVSP|NA|
-|**IBM_EquityIndexShifts_DFMGI**|*DFM DFM GENERAL IDX*|DFMGI|EU|
-|**IBM_EquityIndexShifts_EGX30**|*EGX 30 IDX*|EGX30|EU|
-|**IBM_EquityIndexShifts_FCHI**|*CAC 40 INDEX*|FCHI|EU|
-|**IBM_EquityIndexShifts_FTAS**|*FTSE ALL SHARE INDEX*|FTAS|EU|
-|**IBM_EquityIndexShifts_FTITLMS**|*FT IT ALL SHARE IDX*|FTITLMS|EU|
-|**IBM_EquityIndexShifts_GDAX**|*DEUTSCHE BORSE DAX INDEX*|GDAX|EU|
-|**IBM_EquityIndexShifts_GSPTSE**|*TSX-Toronto Stock Exchange 300 Composite Index*|GSPTSE|NA|
-|**IBM_EquityIndexShifts_HSI**|*HANG SENG INDEX*|HSI|AP|
-|**IBM_EquityIndexShifts_IBEX**|*IBEX 35 COMPOSITE INDEX*|IBEX|EU|
-|**IBM_EquityIndexShifts_IGBC**|*COLOMBIA SE GENERAL INDEX*|IGBC|NA|
-|**IBM_EquityIndexShifts_IGPA**|*CHILEAN SE IGPA INDEX*|IGPA|NA|
-|**IBM_EquityIndexShifts_IMOEX**|*MOEX Russia Index*|IMOEX|EU|
-|**IBM_EquityIndexShifts_ISEQ**|*ISEQ OVERALL IDX*|ISEQ|EU|
-|**IBM_EquityIndexShifts_JALSH**|*ALL SHARE*|JALSH|EU|
-|**IBM_EquityIndexShifts_JKSE**|*JSX COMPOSITE INDEX*|JKSE|AP|
-|**IBM_EquityIndexShifts_KLSE**|*FTSE BURSA MALAYSIA KLCI IDX*|KLSE|AP|
-|**IBM_EquityIndexShifts_KS11**|*KOREA SE KOSPI IDX*|KS11|AP|
-|**IBM_EquityIndexShifts_KSE**|*KSE 100 INDEX*|KSE|AP|
-|**IBM_EquityIndexShifts_LUXX**|*LUXEMBOURG SE LUXX X INDEX*|LUXX|EU|
-|**IBM_EquityIndexShifts_MXX**|*S&P/BMV IPC*|MXX|NA|
-|**IBM_EquityIndexShifts_NZ50**|*NEW ZEALAND EXCH NZSX 50 FREE IDX*|NZ50|AP|
-|**IBM_EquityIndexShifts_OMXCPI**|*OMXC ALL PI*|OMXCPI|EU|
-|**IBM_EquityIndexShifts_OMXHPI**|*OMXH GEN PI*|OMXHPI|EU|
-|**IBM_EquityIndexShifts_OMXSPI**|*OMXS ALL SHARE*|OMXSPI|EU|
-|**IBM_EquityIndexShifts_OSEBX**|*OSE BENCH IND_GI*|OSEBX|EU|
-|**IBM_EquityIndexShifts_PSI**|*THE PHILIPPINE STOCK EXC PSEI INDEX*|PSI|AP|
-|**IBM_EquityIndexShifts_PX**|*PX-PRAGUE SE IND IDX*|PX|EU|
-|**IBM_EquityIndexShifts_QSI**|*QE EXCHANGE GENERAL IDX*|QSI|EU|
-|**IBM_EquityIndexShifts_SETI**|*THAILAND SET IDX*|SETI|AP|
-|**IBM_EquityIndexShifts_SPX**|*S&P 500 INDEX*|SPX|NA|
-|**IBM_EquityIndexShifts_SSEC**|*SHANGHAI SE COMPOSITE INDEX*|SSEC|AP|
-|**IBM_EquityIndexShifts_SSMI**|*SWISS MARKET IND*|SSMI|EU|
-|**IBM_EquityIndexShifts_STI**|*FTSE STRAITS TIMES IDX*|STI|EU|
-|**IBM_EquityIndexShifts_SZSC1**|*SZSE CMPN INDEX*|SZSC1|AP|
-|**IBM_EquityIndexShifts_TA125**|*TASE MAIN 125 IDX*|TA125|EU|
-|**IBM_EquityIndexShifts_TOPX**|*TOPIX PRICE INDEX*|TOPX|AP|
-|**IBM_EquityIndexShifts_TWII**|*TAIWAN SE WEIGHTED INDEX*|TWII|AP|
-|**IBM_EquityIndexShifts_WIG**|*WIG POLAND INDEX*|WIG|EU|
-|**IBM_EquityIndexShifts_XU100**|*BIST 100 IDX*|XU100|EU|
+| Scenario Set Name                | Equity Index                                   | Equity Index Ticker | Region |
+|----------------------------------|------------------------------------------------|---------------------|--------|
+| IBM_EquityIndexShifts_AllIndexes | All Supported Indexes                          | N/A                 | All    |
+| IBM_EquityIndexShifts_ADI        | ABU DHABI SECURITIES EXCHANGE GN IDX           | ADI                 | EU     |
+| IBM_EquityIndexShifts_AEX        | AMSTERDAM EXCHANGE INDEX                       | AEX                 | EU     |
+| IBM_EquityIndexShifts_AORD       | S&P ASX ALL ORD INDEX                          | AORD                | AP     |
+| IBM_EquityIndexShifts_ATG        | AT SE GENERAL IDX                              | ATG                 | EU     |
+| IBM_EquityIndexShifts_ATX        | VIENNA SE AUSTRIAN TRADED IDX Index            | ATX                 | EU     |
+| IBM_EquityIndexShifts_BFX        | BEL-20 INDEX                                   | BFX                 | EU     |
+| IBM_EquityIndexShifts_BSESN      | S&P BSE SENSEX IDX                             | BSESN               | AP     |
+| IBM_EquityIndexShifts_BUX        | BUDAPEST SE IDX                                | BUX                 | EU     |
+| IBM_EquityIndexShifts_BVLG       | PSI ALL SHARE GROSS RETURN INDEX               | BVLG                | EU     |
+| IBM_EquityIndexShifts_BVSP       | SAO PAULO SE BOVESPA INDEX                     | BVSP                | NA     |
+| IBM_EquityIndexShifts_DFMGI      | DFM DFM GENERAL IDX                            | DFMGI               | EU     |
+| IBM_EquityIndexShifts_EGX30      | EGX 30 IDX                                     | EGX30               | EU     |
+| IBM_EquityIndexShifts_FCHI       | CAC 40 INDEX                                   | FCHI                | EU     |
+| IBM_EquityIndexShifts_FTAS       | FTSE ALL SHARE INDEX                           | FTAS                | EU     |
+| IBM_EquityIndexShifts_FTITLMS    | FT IT ALL SHARE IDX                            | FTITLMS             | EU     |
+| IBM_EquityIndexShifts_GDAX       | DEUTSCHE BORSE DAX INDEX                       | GDAX                | EU     |
+| IBM_EquityIndexShifts_GSPTSE     | TSX-Toronto Stock Exchange 300 Composite Index | GSPTSE              | NA     |
+| IBM_EquityIndexShifts_HSI        | HANG SENG INDEX                                | HSI                 | AP     |
+| IBM_EquityIndexShifts_IBEX       | IBEX 35 COMPOSITE INDEX                        | IBEX                | EU     |
+| IBM_EquityIndexShifts_IGBC       | COLOMBIA SE GENERAL INDEX                      | IGBC                | NA     |
+| IBM_EquityIndexShifts_IGPA       | CHILEAN SE IGPA INDEX                          | IGPA                | NA     |
+| IBM_EquityIndexShifts_IMOEX      | MOEX Russia Index                              | IMOEX               | EU     |
+| IBM_EquityIndexShifts_ISEQ       | ISEQ OVERALL IDX                               | ISEQ                | EU     |
+| IBM_EquityIndexShifts_JALSH      | ALL SHARE                                      | JALSH               | EU     |
+| IBM_EquityIndexShifts_JKSE       | JSX COMPOSITE INDEX                            | JKSE                | AP     |
+| IBM_EquityIndexShifts_KLSE       | FTSE BURSA MALAYSIA KLCI IDX                   | KLSE                | AP     |
+| IBM_EquityIndexShifts_KS11       | KOREA SE KOSPI IDX                             | KS11                | AP     |
+| IBM_EquityIndexShifts_KSE        | KSE 100 INDEX                                  | KSE                 | AP     |
+| IBM_EquityIndexShifts_LUXX       | LUXEMBOURG SE LUXX X INDEX                     | LUXX                | EU     |
+| IBM_EquityIndexShifts_MXX        | S&P/BMV IPC                                    | MXX                 | NA     |
+| IBM_EquityIndexShifts_NZ50       | NEW ZEALAND EXCH NZSX 50 FREE IDX              | NZ50                | AP     |
+| IBM_EquityIndexShifts_OMXCPI     | OMXC ALL PI                                    | OMXCPI              | EU     |
+| IBM_EquityIndexShifts_OMXHPI     | OMXH GEN PI                                    | OMXHPI              | EU     |
+| IBM_EquityIndexShifts_OMXSPI     | OMXS ALL SHARE                                 | OMXSPI              | EU     |
+| IBM_EquityIndexShifts_OSEBX      | OSE BENCH IND_GI                               | OSEBX               | EU     |
+| IBM_EquityIndexShifts_PSI        | THE PHILIPPINE STOCK EXC PSEI INDEX            | PSI                 | AP     |
+| IBM_EquityIndexShifts_PX         | PX-PRAGUE SE IND IDX                           | PX                  | EU     |
+| IBM_EquityIndexShifts_QSI        | QE EXCHANGE GENERAL IDX                        | QSI                 | EU     |
+| IBM_EquityIndexShifts_SETI       | THAILAND SET IDX                               | SETI                | AP     |
+| IBM_EquityIndexShifts_SPX        | S&P 500 INDEX                                  | SPX                 | NA     |
+| IBM_EquityIndexShifts_SSEC       | SHANGHAI SE COMPOSITE INDEX                    | SSEC                | AP     |
+| IBM_EquityIndexShifts_SSMI       | SWISS MARKET IND                               | SSMI                | EU     |
+| IBM_EquityIndexShifts_STI        | FTSE STRAITS TIMES IDX                         | STI                 | EU     |
+| IBM_EquityIndexShifts_SZSC1      | SZSE CMPN INDEX                                | SZSC1               | AP     |
+| IBM_EquityIndexShifts_TA125      | TASE MAIN 125 IDX                              | TA125               | EU     |
+| IBM_EquityIndexShifts_TOPX       | TOPIX PRICE INDEX                              | TOPX                | AP     |
+| IBM_EquityIndexShifts_TWII       | TAIWAN SE WEIGHTED INDEX                       | TWII                | AP     |
+| IBM_EquityIndexShifts_WIG        | WIG POLAND INDEX                               | WIG                 | EU     |
+| IBM_EquityIndexShifts_XU100      | BIST 100 IDX                                   | XU100               | EU     |
 
 ## Interest rate standard shift scenarios
 {: #ir}
