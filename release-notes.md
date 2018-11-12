@@ -58,7 +58,6 @@ The following new features and changes to the service are available.
         -  ```isin``` (International Securities Identification Number)
         -  ```ric``` (Reuters Instrument Code)
         -  ```sedol``` (Stock Exchange Daily Official List)
-        -  ```ticker``` (ticker symbol)
 
 - **Support for CSV-format responses**
-    - You can return responses in CSV format. Use the query parameter ```response_format``` and set it as follows: ```response_format=CSV```
+    - You can return responses in CSV format. Use the query parameter ```format``` and set it as follows: ```format=CSV```

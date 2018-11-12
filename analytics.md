@@ -41,8 +41,8 @@ This table contains 'Field Name' values that you can pass to the API for the mea
 |[Return](/docs/services/simulated-instrument-analytics/analytics.html#Return)|Theo/Value@REL(scen&time,%diff)|X|X|X|
 |[Yield](/docs/services/simulated-instrument-analytics/analytics.html#Yield)|THEO/Yield|X| | |
 |[Adjusted Duration](/docs/services/simulated-instrument-analytics/analytics.html#AdjustedDuration)|THEO/Adjusted Duration|X| |X|
-|[Effective Duration](/docs/services/simulated-instrument-analytics/analytics.html#EffectiveDuration)|THEO/Macaulay Duration|X| |X|
-|[Macaulay Duration](/docs/services/simulated-instrument-analytics/analytics.html#MacaulayDuration)|THEO/Effective Duration|X| |X|
+|[Macaulay Duration](/docs/services/simulated-instrument-analytics/analytics.html#EffectiveDuration)|THEO/Macaulay Duration|X| |X|
+|[Effective Duration](/docs/services/simulated-instrument-analytics/analytics.html#MacaulayDuration)|THEO/Effective Duration|X| |X|
 |[Monetary Duration](/docs/services/simulated-instrument-analytics/analytics.html#MonetaryDuration)|THEO/Monetary Duration|X| |X|
 |[Convexity](/docs/services/simulated-instrument-analytics/analytics.html#Convexity)|THEO/Convexity|X| |X|
 |[Effective Convexity](/docs/services/simulated-instrument-analytics/analytics.html#EffectiveConvexity)|THEO/Effective Convexity|X| |X|
@@ -103,7 +103,7 @@ In the case of derivative securities, Exposure will represent the price * quanti
 ### Effective Duration
 {: #EffectiveDuration}
 
-**Effective Duration** is an empirically derived measure of asset price sensitivity to changes in interest rate. The main difference between the effective duration and the modified duration is the assumption regarding constant cash flow. That is, modified duration assumes that a change in the yield will not affect the cash flow (flat yield curve), whereas effective duration does'nt have that premise. The default tweak is 0.005.
+**Effective Duration** is an empirically derived measure of asset price sensitivity to changes in interest rate. The main difference between the effective duration and the modified duration is the assumption regarding constant cash flow. That is, modified duration assumes that a change in the yield will not affect the cash flow (flat yield curve), whereas effective duration doesn't have that premise. The default tweak is 0.005.
 
 𝐸𝑓𝑓 𝐷𝑢𝑟(𝑃𝑜𝑠) = 𝑉(𝑆 − 𝑇𝑤𝑒𝑎𝑘) − 𝑉(𝑆 + 𝑇𝑤𝑒𝑎𝑘) / (2×𝑇𝑤𝑒𝑎𝑘×𝑉(𝑆))
 

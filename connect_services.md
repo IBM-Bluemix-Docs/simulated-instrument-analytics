@@ -130,7 +130,7 @@ To call the service, replace `api-key` with the service key.
 The following example demonstrates the calculation of analytics on a financial security, which you specify by using an instrument identifier, under current market conditions:
 
 ```
-curl -X GET -H "X-ibm-api-key: <api-key>" -H https://sia.cloud.ibm.com/v2/mtm/<id-of-instrument>
+curl -X GET -H "X-ibm-api-key: <api-key>" https://sia.cloud.ibm.com/v2/mtm/<ID_type>?ids=<id-of-instrument>
 ```
 {:codeblock}
 
