@@ -55,7 +55,7 @@ Each equity standard shift scenario set includes the following standard shifts:
 
 * **Down 10%** - *A 10% decrease to the specified equity index*
 * **Up 10%** - *A 10% increase to the specified equity index*
-* **no changes** - *A baseline scenario with no shift to equity indexes*
+* **No changes** - *A baseline scenario with no shift to equity indexes*
 
 The following Equity Indexes have support for standard shifts to equity scenarios:
 
@@ -214,9 +214,9 @@ The following industry-specific credit spread curves have support for standard s
 
 Each FX standard shift scenario set includes the following standard shifts:
 
-* **USD Appreciates 10% with respect to &lt;XYZ&gt;** - *A 10% increase in the value of USD*
-* **Parallel -100bps** - *A 100 basis point absolute decrease to each term on the credit spread curve*
-* **0bp shift** - *A baseline scenario with no shift to credit spread curves*
+* **USD appreciates 10% with respect to &lt;XYZ&gt;** - *A 10% increase in the value of USD*
+* **USD depreciates 10% with respect to &lt;XYZ&gt;** - *A 10% decrease in the value of USD*
+* **USD unchanged with respect to &lt;XYZ&gt;** - *No change in the value of USD*
 
 In all cases, USD is assumed to be the base currency. The following foreign exchange standard shift scenarios are supported:
 

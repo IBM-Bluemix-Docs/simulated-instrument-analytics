@@ -6,12 +6,12 @@ Simulated Instrument Analytics
 
     {: .navgroup id="learn"}
     index.md
-    connect_services.md
+    examples.md
     analytics.md
     scenarios.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     release-notes.md
-    [API Reference](https://console.cloud.ibm.com/apidocs/simulated-instrument-analytics)
+    [API Reference](https://console.test.cloud.ibm.com/apidocs/simulated-instrument-analytics){: new_window}
     {: .navgroup-end}
