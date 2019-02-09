@@ -1,13 +1,13 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-09"
+  years: 2018, 2019
+lastupdated: "2019-02-08"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+<!--{:new_window: target="_blank"}-->
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,20 +31,27 @@ IBM provides a number of predefined scenario sets that you can apply by using th
 
 <!-- ##  Standard shift scenarios -->
 
-Standard shift scenarios represent standardized shocks to risk factors. 
-Standard shifts include pre-defined absolute shifts (for example, + 10 basis points 
-to a curve) or relative shifts (for example, -10% to an equity index). 
-As these values are standardized, scenario definitions don't need to be 
-updated periodically. You can access scenario definitions in the API by including the 
+Standard shift scenarios represent standardized shocks to risk factors.
+Standard shifts include pre-defined absolute shifts (for example, + 10 basis points
+to a curve) or relative shifts (for example, -10% to an equity index).
+As these values are standardized, scenario definitions don't need to be
+updated periodically. You can access scenario definitions in the API by including the
 scenario name in the `ibm-scenario-set-name` payload parameter.
 
-Standard shift scenarios are often required as part of financial regulation, as well as for internal risk management reporting. 
+Standard shift scenarios are often required as part of financial regulation, as well as for internal risk management reporting.
 
 The following are the major types of standard shift scenario sets that are available to the user:
 * [Equity Standard Shift Scenarios](/docs/services/simulated-instrument-analytics/scenarios.html#eq)
 * [Interest Rate Standard Shift Scenarios](/docs/services/simulated-instrument-analytics/scenarios.html#ir)
 * [Credit Spread Standard Shift Scenarios](/docs/services/simulated-instrument-analytics/scenarios.html#cs)
 * [FX Standard Shift Scenarios](/docs/services/simulated-instrument-analytics/scenarios.html#fx)
+
+<!--
+[Equity Standard Shift Scenarios](#eq)
+[Interest Rate Standard Shift Scenarios](#ir)
+[Credit Spread Standard Shift Scenarios](#cs)
+[FX Standard Shift Scenarios](#fx)
+-->
 
 <!-- Note: As these -->
 
@@ -140,12 +147,12 @@ Each interest rate standard shift scenario set includes the following standard s
 
 ### Variable factor scenarios
 
-* **Twist Up** - *A relative shift in which interest rates twist around the 2-year term. Short-term rates fall by declining magnitudes until the 2-year term which experiences no change. Longer-term rates rise gradually up to the 30-year term to which a relative term increase of ~25% is applied.* 
-* **Twist Down** - *A relative shift in which interest rates twist around the 2-year term. Short-term rates rise by decreasing magnitudes until the 2-year term which experiences no change. Longer-term rates fall by increasing magnitudes up to the 30-year term to which a relative term increase of ~25% is applied.* 
+* **Twist Up** - *A relative shift in which interest rates twist around the 2-year term. Short-term rates fall by declining magnitudes until the 2-year term which experiences no change. Longer-term rates rise gradually up to the 30-year term to which a relative term increase of ~25% is applied.*
+* **Twist Down** - *A relative shift in which interest rates twist around the 2-year term. Short-term rates rise by decreasing magnitudes until the 2-year term which experiences no change. Longer-term rates fall by increasing magnitudes up to the 30-year term to which a relative term increase of ~25% is applied.*
 * **Butterfly Up** - *A relative shift in which interest rates twist around two curve points: the 2-year term and the 10-year term. Short-term rates fall by declining magnitudes until the 2-year term which is held constant. Medium-term rates rise with increasing magnitudes to the 5-year term, after which they begin to fall until the 10-year term which is also held constant. Long-term rates then decline with increasing magnitudes out to the 30-year term.*
 * **Butterfly Down** - *A relative shift in which interest rates twist around two curve points: the 2-year term and the 10-year term. Short-term rates rise by declining magnitudes until the 2-year term which is held constant. Medium-term rates fall with increasing magnitudes to the 5-year term, after which they begin to rise until the 10-year term which is also held constant. Long-term rates then increase with increasing magnitudes out to the 30-year term.*
 
-Interest rate curves are grouped into three types of curves: Treasury Curves, Interbank Curves, and Overnight-Index-Swap (OIS) Curves. 
+Interest rate curves are grouped into three types of curves: Treasury Curves, Interbank Curves, and Overnight-Index-Swap (OIS) Curves.
 The following interet rate curves have support for interest rate standard shift scenario sets:
 
 |Scenario Set Name|Country or Region|Treasury Curves|Interbank Curves|OIS Curves
@@ -191,7 +198,7 @@ Each credit spread standard shift scenario set includes the following standard s
 * **Parallel -100bps** - *A 100 basis point absolute decrease to each term on the credit spread curve*
 * **0bp shift** - *A baseline scenario with no shift to credit spread curves*
 
-Credit Curves are currently industry specific. All corporate fixed-income instruments with credit risk will be assigned a credit curve based on the industry sector of the issuer and the credit rating of the issuer. 
+Credit Curves are currently industry specific. All corporate fixed-income instruments with credit risk will be assigned a credit curve based on the industry sector of the issuer and the credit rating of the issuer.
 The following industry-specific credit spread curves have support for standard shift scenarios:
 
 |Scenario Set Name|Industry Sector|AAA|AA|A|BBB|BB|B|CCC

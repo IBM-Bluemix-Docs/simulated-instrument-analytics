@@ -1,13 +1,13 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-09"
+  years: 2018, 2019
+lastupdated: "2019-02-08"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+<!--{:new_window: target="_blank"}-->
 {:tip: .tip}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -42,15 +42,16 @@ The following new features and changes to the service are available.
 ### 30 October 2018
 {: #30october2018}
 
-- **Integration with {{site.data.keyword.mfd_full_notm}}** 
-    - The {{site.data.keyword.sia_full}} service integrates with {{site.data.keyword.mfd_full}}. 
+- **Integration with {{site.data.keyword.mfd_full_notm}}**
+    - The {{site.data.keyword.sia_full}} service integrates with {{site.data.keyword.mfd_full}}.
       If you subscribe to the {{site.data.keyword.mfd_short}} service, when you run {{site.data.keyword.siminstruanalshort}} requests, you can then retrieve financial data from the {{site.data.keyword.mfd_full_notm}} service.
-      See [Connecting to {{site.data.keyword.siminstruanalshort}}](/docs/services/simulated-instrument-analytics/connect_services.html) for more information.
+      See [Connecting to {{site.data.keyword.mfd_full_notm}}](/docs/services/simulated-instrument-analytics/connect_services.html) for more information.
+<!--      See [Connecting to {{site.data.keyword.mfd_full_notm}}](/docs/services/simulated-instrument-analytics?topic=simulated-instrument-analytics-getting_started_siminstruanalshort#connecting-to-ibm-managed-financial-data-api) for more information.-->
 
 
 - **Combined services**
     - The experimental services {{site.data.keyword.instranalshort}}, {{site.data.keyword.simhistinstruanalshort}}, and {{site.data.keyword.hisinstranalshort}} have been combined into the {{site.data.keyword.siminstruanalshort}} service. Now all operations that you previously performed using the endpoints are now supported in {{site.data.keyword.siminstruanalshort}}. The services {{site.data.keyword.instranalshort}}, {{site.data.keyword.simhistinstruanalshort}}, and {{site.data.keyword.hisinstranalshort}} are now deprecated.
-    - The service URL for {{site.data.keyword.siminstruanalshort}} is now ```https://sia.cloud.ibm.com```
+    - The service URL for {{site.data.keyword.siminstruanalshort}} is now ```https://us-south.sia.cloud.ibm.com```
     - The endpoints for these services are now ```v2/simulate``` and ```v2/mtm```
 
 - **Support for instruments**

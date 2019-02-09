@@ -1,13 +1,13 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-09"
+  years: 2018, 2019
+lastupdated: "2019-02-08"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+<!--{:new_window: target="_blank"}-->
 {:tip: .tip}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -63,19 +63,19 @@ This table contains 'Field Name' values that you can pass to the API for the mea
 ### Price
 {: #Price}
 
-**Price**, or **Clean Value**, is the price of a security excluding any accrued interest since a previous payment. For securities without periodic payments, clean price represents the current value of the security. 
+**Price**, or **Clean Value**, is the price of a security excluding any accrued interest since a previous payment. For securities without periodic payments, clean price represents the current value of the security.
 
 ### Value
 {: #Value}
 
-**Value**, or **Dirty Price**, is the present value of future cash flows. Dirty price includes any accrued interest since the last periodic payment if applicable. 
+**Value**, or **Dirty Price**, is the present value of future cash flows. Dirty price includes any accrued interest since the last periodic payment if applicable.
 
 For Fixed Income securities, Dirty Price = Clean Price + Accrued Interest.
 
 ### Exposure
 {: #Exposure}
 
-**Exposure** is the outstanding value of a financial security. For an Equity, a Fixed Income, and other physical holdings, the Exposure would be equal to the Value of the security. 
+**Exposure** is the outstanding value of a financial security. For an Equity, a Fixed Income, and other physical holdings, the Exposure would be equal to the Value of the security.
 
 In the case of derivative securities, Exposure will represent the price * quantity of the underlying security. This is especially relevant for futures or options.
 
@@ -87,7 +87,7 @@ In the case of derivative securities, Exposure will represent the price * quanti
 ### Return
 {: #Return}
 
-**Return** is unrealized profit or loss resulting from a change under a scenario, in percentage terms. 
+**Return** is unrealized profit or loss resulting from a change under a scenario, in percentage terms.
 
 ### Yield
 {: #Yield}
@@ -176,4 +176,3 @@ In the case of derivative securities, Exposure will represent the price * quanti
 **Vega** is the rate of change of the price of an instrument to changes in volatility of the price of the underlying, or just the first derivative of the value of the instrument with respect to volatility.
 
 𝛬 = (𝑉(1.01 ∙ 𝜎) − 𝑉(𝜎)) / 𝜎
-

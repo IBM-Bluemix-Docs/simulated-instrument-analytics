@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-03"
+  years: 2017, 2019
+lastupdated: "2019-02-08"
 
 ---
-{:new_window: target="_blank"}
+<!--{:new_window: target="_blank"}-->
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -37,28 +37,29 @@ The {{site.data.keyword.siminstruanalshort}} service supports the computation of
 ## Connecting to {{site.data.keyword.mfd_full_notm}}
 You need to set up {{site.data.keyword.sia_full}} to connect to the {{site.data.keyword.mfd_full}}.
 
-The {{site.data.keyword.mfd_full_notm}} provides access to financial market data required when you're working with 
+The {{site.data.keyword.mfd_full_notm}} provides access to financial market data required when you're working with
 the financial models that are used in the {{site.data.keyword.sia_full_notm}}.
 
-When you subscribe to the {{site.data.keyword.mfd_full_notm}}, {{site.data.keyword.sia_full_notm}} 
-retrieves data on your behalf. You don't interact with the {{site.data.keyword.mfd_full_notm}} 
-service directly. The {{site.data.keyword.mfd_full_notm}} supplies all of the data that is required to process your request to the 
+When you subscribe to the {{site.data.keyword.mfd_full_notm}}, {{site.data.keyword.sia_full_notm}}
+retrieves data on your behalf. You don't interact with the {{site.data.keyword.mfd_full_notm}}
+service directly. The {{site.data.keyword.mfd_full_notm}} supplies all of the data that is required to process your request to the
 {{site.data.keyword.sia_full_notm}}.
 
-The market data that is used in calculations are provided by the third-party market data provider 
-that is associated with the instance of {{site.data.keyword.mfd_full_notm}} with which you integrated. 
-To provision an instance of {{site.data.keyword.mfd_full_notm}} or to learn more about our third-party 
+The market data that is used in calculations are provided by the third-party market data provider
+that is associated with the instance of {{site.data.keyword.mfd_full_notm}} with which you integrated.
+To provision an instance of {{site.data.keyword.mfd_full_notm}} or to learn more about our third-party
 data patterns, see the IBM Cloud catalog entry. <!-- Rob wants a link to the  IBM Cloud Catalog entry for MFD -->
 
 For more information about the {{site.data.keyword.mfd_full_notm}}, see the [{{site.data.keyword.mfd_short}} documentation](/docs/services/managed-financial-data/index.html).
+<!--For more information about the {{site.data.keyword.mfd_full_notm}}, see the [{{site.data.keyword.mfd_short}} documentation](/docs/services/managed-financial-data?topic=managed-financial-data-getting_started_mfd_short#getting_started_mfd_short).-->
 
 
-Before you call the {{site.data.keyword.siminstruanalshort}} service, do the following tasks: 
+Before you call the {{site.data.keyword.siminstruanalshort}} service, do the following tasks:
 
 1. Create instances of {{site.data.keyword.siminstruanalshort}} and {{site.data.keyword.mfd_short}} service
 2. Assign access policies to the users of {{site.data.keyword.siminstruanalshort}} and {{site.data.keyword.mfd_short}}
 3. Authorize {{site.data.keyword.siminstruanalshort}} to use {{site.data.keyword.mfd_short}}
-4. Provide the API key for {{site.data.keyword.mfd_short}} to {{site.data.keyword.siminstruanalshort}}
+4. Provide the UUID instance ID for {{site.data.keyword.mfd_short}} to {{site.data.keyword.siminstruanalshort}}
 
 
 ## Creating service instances and getting your credentials
@@ -74,12 +75,13 @@ Create the service instances for {{site.data.keyword.mfd_short}} and then {{site
 ```
 {
   "apikey": "<api-key>",
+  "uuid":<uuid>,
   "url:": "<service-url>"
 }
 ```
 {:codeblock}
- 
-In a later step, you'll copy the API key for {{site.data.keyword.mfd_short}} service instance to connect it with an instance of the {{site.data.keyword.siminstruanalshort}} service.
+
+In a later step, you'll copy the UUID for {{site.data.keyword.mfd_short}} service instance to connect it with an instance of the {{site.data.keyword.siminstruanalshort}} service.
 {:tip}
 
 ### Creating the {{site.data.keyword.siminstruanalshort}} service instance
@@ -90,6 +92,7 @@ In a later step, you'll copy the API key for {{site.data.keyword.mfd_short}} ser
 ```
 {
   "apikey": "<api-key>",
+  "uuid":"<uuid>",
   "url:": "<service-url>"
 }
 ```
@@ -112,13 +115,13 @@ In this case, the steps focus on assigning an access policy to your user name.
 6. Enter the name of your service and select the service.
 7. Under "Assign service access roles", check `Reader` and then click **Assign**.
 
-Reader access is all that you require to use {{site.data.keyword.siminstruanalshort}} and {{site.data.keyword.mfd_short}}. 
+Reader access is all that you require to use {{site.data.keyword.siminstruanalshort}} and {{site.data.keyword.mfd_short}}.
 The assigned access policy applies to all the resources of the service.
 
 
 
 
-## Authorizing {{site.data.keyword.siminstruanalshort}} to use {{site.data.keyword.mfd_short}} 
+## Authorizing {{site.data.keyword.siminstruanalshort}} to use {{site.data.keyword.mfd_short}}
 {: #authorizing_sia_for_mfd}
 
 In this case, you're authorizing a single instance of {{site.data.keyword.siminstruanalshort}} to work with a specific instance of {{site.data.keyword.mfd_short}}.
@@ -131,17 +134,19 @@ In this case, you're authorizing a single instance of {{site.data.keyword.simins
 6. For the Target service, select `Managed Financial Data`.
 7. For the Target service instance, select the instance of {{site.data.keyword.mfd_short}} from the list that you created in the previous steps.
 8. Under Assign service access roles, check **Reader**.
-9. Click **Authorize**. 
+9. Click **Authorize**.
 
-## Providing the API key {{site.data.keyword.mfd_short}} to {{site.data.keyword.siminstruanalshort}}
+## Providing the Instance ID (UUID) for {{site.data.keyword.mfd_short}} to {{site.data.keyword.siminstruanalshort}}
 {: #providing_api_key}
 
 
-Ensure that the instance of {{site.data.keyword.siminstruanalshort}}, which you identified as the source service instance, has the API key for the {{site.data.keyword.mfd_short}} service instance. 
+Ensure that the instance of {{site.data.keyword.siminstruanalshort}}, which you identified as the source service instance, has the API key for the {{site.data.keyword.mfd_short}} service instance.
 
 1. From the Dashboard's view of your applications, select the {{site.data.keyword.siminstruanalshort}} service instance and click **Manage**.
-2. In the field **Enter MFD api key**, paste the API key from the {{site.data.keyword.mfd_short}} service instance and click **Submit**.
+2. In the field **Enter MFD UUID instance ID**, paste the UUID from the {{site.data.keyword.mfd_short}} service instance and click **Submit**.
 
+You can find the MFD UUID value on the {{site.data.keyword.mfd_short}} **Manage** panel.
+{:note}
 
 ## Calling the service
 {: #calling_service}
@@ -153,13 +158,14 @@ To call the service, replace `api-key` with your service key.
 The following example demonstrates the calculation of analytics on a financial security, which you specify by using an instrument identifier, under current market conditions:
 
 ```
-curl -X GET -H "X-ibm-api-key : <api-key>" -H "Content-Type:application/json" https://us-south.sia.cloud.ibm.com/v2/mtm/<ID_type>?ids=<id-of-instrument>
+curl -X GET -H "Authorization-api-key : <api-key>"  -H "Authorization-instance-id : <uuid>" -H "Content-Type:application/json" https://us-south.sia.cloud.ibm.com/v2/mtm/<ID_type>?ids=<id-of-instrument>
 ```
 {:codeblock}
 
 where `ID_type` is one of `ric`, `isin`, or  `sedol`.
 
 See [Request examples](/docs/services/simulated-instrument-analytics/examples.html) for a set of more detailed examples.
+<!--See [Request examples](/docs/services/simulated-instrument-analytics?topic=simulated-instrument-analytics-request-examples) for a set of more detailed examples.-->
 
 
 
@@ -169,7 +175,5 @@ See [Request examples](/docs/services/simulated-instrument-analytics/examples.ht
 When you connect {{site.data.keyword.mfd_short}} to {{site.data.keyword.siminstruanalshort}}, you might need to troubleshoot problems with authentication and authorization.
 
 * When the API key for the {{site.data.keyword.siminstruanalshort}} service is incorrect, you encounter an authentication issue.
-* When the API key for the {{site.data.keyword.siminstruanalshort}} service is correct but the API key for {{site.data.keyword.mfd_short}} that you provided to the {{site.data.keyword.siminstruanalshort}} service instance is incorrect, {{site.data.keyword.siminstruanalshort}} connects but it does not connect to {{site.data.keyword.mfd_short}} properly.
-* When the API key for the {{site.data.keyword.siminstruanalshort}} service is correct and the API key for {{site.data.keyword.mfd_short}} that you provided to the {{site.data.keyword.siminstruanalshort}} service instance is also correct, but you aren't using the service instance of {{site.data.keyword.mfd_short}} that was identified as the target, {{site.data.keyword.siminstruanalshort}} connects but you encounter an authorization error.
-
- 
+* When the API key for the {{site.data.keyword.siminstruanalshort}} service is correct but the UUID key for {{site.data.keyword.mfd_short}} that you provided to the {{site.data.keyword.siminstruanalshort}} service instance is incorrect, {{site.data.keyword.siminstruanalshort}} connects but it does not connect to {{site.data.keyword.mfd_short}} properly.
+* When the API key for the {{site.data.keyword.siminstruanalshort}} service is correct and the UUID for {{site.data.keyword.mfd_short}} that you provided to the {{site.data.keyword.siminstruanalshort}} service instance is also correct, but you aren't using the service instance of {{site.data.keyword.mfd_short}} that was identified as the target, {{site.data.keyword.siminstruanalshort}} connects but you encounter an authorization error.

@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-03"
+  years: 2017, 2019
+lastupdated: "2019-02-08"
 
 ---
-{:new_window: target="_blank"}
+<!--{:new_window: target="_blank"}-->
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -20,6 +20,7 @@ lastupdated: "2018-12-03"
 # Request examples
 
 These sample requests supplement the simple example provided in [Getting started with {{site.data.keyword.siminstruanalshort}}](/docs/services/simulated-instrument-analytics/index.html).
+<!--These sample requests supplement the simple example provided in [Getting started with {{site.data.keyword.siminstruanalshort}}](/docs/services/simulated-instrument-analytics?topic=simulated-instrument-analytics-getting_started_siminstruanalshort).-->
 
 
 
@@ -31,7 +32,7 @@ These sample requests supplement the simple example provided in [Getting started
 The following example demonstrates a call to get current (time zero or t0) analytics on a financial security by using a GET request:
 
 ```
-curl -X GET -H "X-ibm-api-key: <api-key>" -H "Content-Type:application/json" https://us-south.sia.cloud.ibm.com/v2/mtm/isin?ids=<id-of-instrument-1>,<id-of-instrument-2>
+curl -X GET -H "Authorization-api-key: <api-key>" -H "Authorization-instance-id: <uuid>" -H "Content-Type:application/json" https://us-south.sia.cloud.ibm.com/v2/mtm/isin?ids=<id-of-instrument-1>,<id-of-instrument-2>
 
 ```
 {:codeblock}
@@ -64,11 +65,11 @@ The following example shows a response to a successful request:
 ### Computing multiple analytics on an instrument
 
 
-Perhaps your use case requires multiple analytics to be computed on one or more instruments. To do so, use a POST request. Replace `api-key` with your service key.
+Perhaps your use case requires multiple analytics to be computed on one or more instruments. To do so, use a POST request. Replace `api-key` with your service key, and `instance-id` with your UUID.
 The following example shows a request for the computation of multiple analytics on a single financial instrument, which is specified by its instrument identifier:
 
 ```
-curl -X POST https://us-south.sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key : <api-key>" -H "Content-Type:application/json"  -d '{ "id-list": [{ "id": "IBM", "type":"ric" }],"analytics" : ["Price","Delta"]}'
+curl -X POST https://us-south.sia.cloud.ibm.com/v2/simulate -H "Authorization-api-key:<api-key>" -H "Authorization-instance-id:<uuid>" -H "Content-Type:application/json"  -d '{ "id-list": [{ "id": "IBM", "type":"ric" }],"analytics" : ["Price","Delta"]}'
 ```
 {:codeblock}
 
@@ -97,7 +98,7 @@ The following example shows a response to a successful request:
 
 To request one or more analytics across multiple instruments in a single request, you must enhance the POST request to include a list of instruments.
 ```
-curl -X POST https://us-south.sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key: <api-key>" -H "Content-Type:application/json"  -d '{ "id-list": [{ "id": "IBM", "type":"ric" }, { "id": "US59022CAJ27", "type":"isin" }], "analytics" : ["Dirty Price","Clean Price","Effective Duration"] }'
+curl -X POST https://us-south.sia.cloud.ibm.com/v2/simulate -H "Authorization-api-key: <api-key>" -H "Authorization-instance-id:<uuid>" -H "Content-Type:application/json"  -d '{ "id-list": [{ "id": "IBM", "type":"ric" }, { "id": "US59022CAJ27", "type":"isin" }], "analytics" : ["Dirty Price","Clean Price","Effective Duration"] }'
 ```
 {:codeblock}
 
@@ -136,12 +137,12 @@ To calculate analytics for dates in the past, issue a POST request.
 ### Computing historical analytics for one or more instruments
 <!--Postman example name is "historical multiple instrument pricing" -->
 
-You can submit a request to the service to compute historical analytics for one or more instruments 
+You can submit a request to the service to compute historical analytics for one or more instruments
 and multiple analytics by issuing a POST request.
-To use this example to test the service, replace `api-key`, specify one or more instrument identifiers, and specify the `valuation-date` (in YYYY-MM-DD format) in the POST request.
+To use this example to test the service, replace `api-key` and `instance-id`, specify one or more instrument identifiers, and specify the `valuation-date` (in YYYY-MM-DD format) in the POST request.
 
 ```
-curl -X POST https://us-south.sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key: <api-key>" -H "Content-Type:application/json"  -d { "id-list": [{ "id": "IBM", "type":"ric" }, { "id": "US59022CAJ27", "type":"isin" }], "valuation-date" : "2018-10-10"}'
+curl -X POST https://us-south.sia.cloud.ibm.com/v2/simulate -H "Authorization-api-key: <api-key>" -H "Authorization-instance-id:<uuid>" -H "Content-Type:application/json"  -d { "id-list": [{ "id": "IBM", "type":"ric" }, { "id": "US59022CAJ27", "type":"isin" }], "valuation-date" : "2018-10-10"}'
 ```
 {:codeblock}
 
@@ -175,13 +176,13 @@ The following example shows a response to a successful request:
 <!--Postman example name is "t0 scenario pricing" -->
 
 
-To observe how an instrument might behave under an alternate set of market conditions (a "stress test"), you can submit a 
+To observe how an instrument might behave under an alternate set of market conditions (a "stress test"), you can submit a
 POST request and specify multiple days in the future by using the `simulation-days` field.
-To use this example to test the service, replace `api-key` with your service key, specify one or more instruments in the `id-list`, specify one or more analytics, specify a scenario set name, and specify multiple `simulation-days`.
+To use this example to test the service, replace `api-key` with your service key and `instance-id` with your UUID, specify one or more instruments in the `id-list`, specify one or more analytics, specify a scenario set name, and specify multiple `simulation-days`.
 <!--To create a scenario file, you can prepare one yourself or use the [{{site.data.keyword.predmarketscenario_short}} service](/docs/services/PredictiveMarketScenarios/index.html).-->
 
 ```
-curl -X POST https://us-south.sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key: <api-key>" -H "Content-Type:application/json" -d '{ "id-list": [{ "id": "IBM", "type":"ric" }],  "analytics" : ["Dirty Price","Clean Price", "Effective Duration"],"ibm-scenario-set-name" : "IBM_EquityIndexShifts_AllCurves", "simulation-days" : [0,6,13,18,30] }'
+curl -X POST https://us-south.sia.cloud.ibm.com/v2/simulate -H "Authorization-api-key: <api-key>" -H "Authorization-instance-id:<uuid>" -H "Content-Type:application/json" -d '{ "id-list": [{ "id": "IBM", "type":"ric" }],  "analytics" : ["Dirty Price","Clean Price", "Effective Duration"],"ibm-scenario-set-name" : "IBM_EquityIndexShifts_AllCurves", "simulation-days" : [0,6,13,18,30] }'
 ```
 {:codeblock}
 
@@ -386,14 +387,14 @@ The following example shows a response to a successful request:
 
 To observe how an instrument might behave under an alternate set of market conditions (a "stress test") *for a date in the past*, you can submit POST requests and specify a `valuation-date` (in YYYY-MM-DD format) and multiple `simulation-days`. This type of request is commonly issued to generate end-of-month or end-of-quarter reports, or to perform backtesting analysis.
 
-To use this example to test the service, replace `api-key` with your service key, specify one or more instrument identifiers, specify one or more analytics, specify a scenario set name, and specify the `valuation-date` and multiple `simulation-days` (as numbers).
+To use this example to test the service, replace `api-key` with your service key and `instance-id` with your UUID, specify one or more instrument identifiers, specify one or more analytics, specify a scenario set name, and specify the `valuation-date` and multiple `simulation-days` (as numbers).
 
 <!--
 To create a scenario file, you can prepare one yourself or use the [{{site.data.keyword.predmarketscenario_short}} service](/docs/services/PredictiveMarketScenarios/index.html).
 -->
 
 ```
-curl -X POST https://us-south.sia.cloud.ibm.com/v2/simulate -H "X-ibm-api-key: <api-key>" -H "Content-Type:application/json" -d '{ "id-list": [{ "id": "IBM", "type":"ric" }],  "analytics" : ["Dirty Price","Clean Price","Effective Duration"], "ibm-scenario-set-name" : "IBM_EquityIndexShifts_AllCurves", "valuation-date" : "2018-10-10",  "simulation-days" : [0,13,30] }'
+curl -X POST https://us-south.sia.cloud.ibm.com/v2/simulate -H "Authorization-api-key: <api-key>" -H "Authorization-instance-id:<uuid>" -H "Content-Type:application/json" -d '{ "id-list": [{ "id": "IBM", "type":"ric" }],  "analytics" : ["Dirty Price","Clean Price","Effective Duration"], "ibm-scenario-set-name" : "IBM_EquityIndexShifts_AllCurves", "valuation-date" : "2018-10-10",  "simulation-days" : [0,13,30] }'
 ```
 {:codeblock}
 
@@ -515,4 +516,3 @@ The following example shows a response to a successful request:
 }
 ```
 {:codeblock}
-
