@@ -13,5 +13,5 @@ Simulated Instrument Analytics
 
     {: .navgroup id="reference"}
     release-notes.md
-    [API Reference](https://console.test.cloud.ibm.com/apidocs/simulated-instrument-analytics){: new_window}
+    [API Reference](https://console.cloud.ibm.com/apidocs/simulated-instrument-analytics){: new_window}
     {: .navgroup-end}
