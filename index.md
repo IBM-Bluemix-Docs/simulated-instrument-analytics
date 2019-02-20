@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-08"
+lastupdated: "2019-02-21"
 
 ---
 <!--{:new_window: target="_blank"}-->
@@ -50,8 +50,8 @@ that is associated with the instance of {{site.data.keyword.mfd_full_notm}} with
 To provision an instance of {{site.data.keyword.mfd_full_notm}} or to learn more about our third-party
 data patterns, see the IBM Cloud catalog entry. <!-- Rob wants a link to the  IBM Cloud Catalog entry for MFD -->
 
-For more information about the {{site.data.keyword.mfd_full_notm}}, see the [{{site.data.keyword.mfd_short}} documentation](/docs/services/managed-financial-data/index.html).
-<!--For more information about the {{site.data.keyword.mfd_full_notm}}, see the [{{site.data.keyword.mfd_short}} documentation](/docs/services/managed-financial-data?topic=managed-financial-data-getting_started_mfd_short#getting_started_mfd_short).-->
+<!--For more information about the {{site.data.keyword.mfd_full_notm}}, see the [{{site.data.keyword.mfd_short}} documentation](/docs/services/managed-financial-data/index.html).-->
+For more information about the {{site.data.keyword.mfd_full_notm}}, see the [{{site.data.keyword.mfd_short}} documentation](/docs/services/managed-financial-data?topic=managed-financial-data-getting_started_mfd_short#getting_started_mfd_short).
 
 
 Before you call the {{site.data.keyword.siminstruanalshort}} service, do the following tasks:
@@ -164,8 +164,8 @@ curl -X GET -H "Authorization-api-key : <api-key>"  -H "Authorization-instance-i
 
 where `ID_type` is one of `ric`, `isin`, or  `sedol`.
 
-See [Request examples](/docs/services/simulated-instrument-analytics/examples.html) for a set of more detailed examples.
-<!--See [Request examples](/docs/services/simulated-instrument-analytics?topic=simulated-instrument-analytics-request-examples) for a set of more detailed examples.-->
+<!-- See [Request examples](/docs/services/simulated-instrument-analytics/examples.html) for a set of more detailed examples. -->
+See [Request examples](/docs/services/simulated-instrument-analytics?topic=simulated-instrument-analytics-request-examples) for a set of more detailed examples.
 
 
 

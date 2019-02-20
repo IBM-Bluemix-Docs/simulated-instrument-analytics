@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-08"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -45,8 +45,8 @@ The following new features and changes to the service are available.
 - **Integration with {{site.data.keyword.mfd_full_notm}}**
     - The {{site.data.keyword.sia_full}} service integrates with {{site.data.keyword.mfd_full}}.
       If you subscribe to the {{site.data.keyword.mfd_short}} service, when you run {{site.data.keyword.siminstruanalshort}} requests, you can then retrieve financial data from the {{site.data.keyword.mfd_full_notm}} service.
-      See [Connecting to {{site.data.keyword.mfd_full_notm}}](/docs/services/simulated-instrument-analytics/connect_services.html) for more information.
-<!--      See [Connecting to {{site.data.keyword.mfd_full_notm}}](/docs/services/simulated-instrument-analytics?topic=simulated-instrument-analytics-getting_started_siminstruanalshort#connecting-to-ibm-managed-financial-data-api) for more information.-->
+      <!--See [Connecting to {{site.data.keyword.mfd_full_notm}}](/docs/services/simulated-instrument-analytics/connect_services.html) for more information. -->
+See [Connecting to {{site.data.keyword.mfd_full_notm}}](/docs/services/simulated-instrument-analytics?topic=simulated-instrument-analytics-getting_started_siminstruanalshort#connecting-to-ibm-managed-financial-data-api) for more information.
 
 
 - **Combined services**

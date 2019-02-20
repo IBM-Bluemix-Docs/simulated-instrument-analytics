@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-08"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -31,30 +31,30 @@ This table contains 'Field Name' values that you can pass to the API for the mea
 
 |Field Name|Legacy Name|Fixed Income|Equity|Derivative|
 |------------|----------|------------|------|-----------|
-|[Price](/docs/services/simulated-instrument-analytics/analytics.html#Price)|THEO/Price|X|X|X|
-|[Value](/docs/services/simulated-instrument-analytics/analytics.html#Value)|THEO/Value|X|X|X|
-|[Clean Value](/docs/services/simulated-instrument-analytics/analytics.html#Price)|THEO/Price|X|X|X|
-|[Dirty Price](/docs/services/simulated-instrument-analytics/analytics.html#Value)|THEO/Value|X|X|X|
-|[Exposure](/docs/services/simulated-instrument-analytics/analytics.html#Exposure)|THEO/Exposure|X|X|X|
-|[Profit and Loss](/docs/services/simulated-instrument-analytics/analytics.html#PnL)|POS/Unrealized Profit and Loss Theoretical|X|X|X|
-|[PnL](/docs/services/simulated-instrument-analytics/analytics.html#PnL)|POS/Unrealized Profit and Loss Theoretical|X|X|X|
-|[Return](/docs/services/simulated-instrument-analytics/analytics.html#Return)|Theo/Value@REL(scen&time,%diff)|X|X|X|
-|[Yield](/docs/services/simulated-instrument-analytics/analytics.html#Yield)|THEO/Yield|X| | |
-|[Adjusted Duration](/docs/services/simulated-instrument-analytics/analytics.html#AdjustedDuration)|THEO/Adjusted Duration|X| |X|
-|[Macaulay Duration](/docs/services/simulated-instrument-analytics/analytics.html#EffectiveDuration)|THEO/Macaulay Duration|X| |X|
-|[Effective Duration](/docs/services/simulated-instrument-analytics/analytics.html#MacaulayDuration)|THEO/Effective Duration|X| |X|
-|[Monetary Duration](/docs/services/simulated-instrument-analytics/analytics.html#MonetaryDuration)|THEO/Monetary Duration|X| |X|
-|[Convexity](/docs/services/simulated-instrument-analytics/analytics.html#Convexity)|THEO/Convexity|X| |X|
-|[Effective Convexity](/docs/services/simulated-instrument-analytics/analytics.html#EffectiveConvexity)|THEO/Effective Convexity|X| |X|
-|[Monetary Convexity](/docs/services/simulated-instrument-analytics/analytics.html#MonetaryConvexity)|THEO/Monetary Convexity|X| |X|
-|[Implied Spread](/docs/services/simulated-instrument-analytics/analytics.html#ImpliedSpread)|THEO/Implied Spread|X| |X|
-|[Delta](/docs/services/simulated-instrument-analytics/analytics.html#Delta)|THEO/Delta| | |X|
-|[Gamma](/docs/services/simulated-instrument-analytics/analytics.html#Gamma)|THEO/Gamma| | |X|
-|[Rho](/docs/services/simulated-instrument-analytics/analytics.html#Rho)|THEO/Domestic Rho| | |X|
-|[Rho Domestic](/docs/services/simulated-instrument-analytics/analytics.html#Rho)|THEO/Domestic Rho| | |X|
-|[Rho Foreign](/docs/services/simulated-instrument-analytics/analytics.html#Rho)|THEO/Foreign Rho| | |X|
-|[Theta](/docs/services/simulated-instrument-analytics/analytics.html#Theta)|THEO/Theta| | |X|
-|[Vega](/docs/services/simulated-instrument-analytics/analytics.html#Vega)|THEO/Vega| | |X|
+|[Price](#Price)|THEO/Price|X|X|X|
+|[Value](#Value)|THEO/Value|X|X|X|
+|[Clean Value](#Price)|THEO/Price|X|X|X|
+|[Dirty Price](#Value)|THEO/Value|X|X|X|
+|[Exposure](#Exposure)|THEO/Exposure|X|X|X|
+|[Profit and Loss](#PnL)|POS/Unrealized Profit and Loss Theoretical|X|X|X|
+|[PnL](#PnL)|POS/Unrealized Profit and Loss Theoretical|X|X|X|
+|[Return](#Return)|Theo/Value@REL(scen&time,%diff)|X|X|X|
+|[Yield](#Yield)|THEO/Yield|X| | |
+|[Adjusted Duration](#AdjustedDuration)|THEO/Adjusted Duration|X| |X|
+|[Macaulay Duration](#EffectiveDuration)|THEO/Macaulay Duration|X| |X|
+|[Effective Duration](#MacaulayDuration)|THEO/Effective Duration|X| |X|
+|[Monetary Duration](#MonetaryDuration)|THEO/Monetary Duration|X| |X|
+|[Convexity](#Convexity)|THEO/Convexity|X| |X|
+|[Effective Convexity](#EffectiveConvexity)|THEO/Effective Convexity|X| |X|
+|[Monetary Convexity](#MonetaryConvexity)|THEO/Monetary Convexity|X| |X|
+|[Implied Spread](#ImpliedSpread)|THEO/Implied Spread|X| |X|
+|[Delta](#Delta)|THEO/Delta| | |X|
+|[Gamma](#Gamma)|THEO/Gamma| | |X|
+|[Rho](#Rho)|THEO/Domestic Rho| | |X|
+|[Rho Domestic](#Rho)|THEO/Domestic Rho| | |X|
+|[Rho Foreign](#Rho)|THEO/Foreign Rho| | |X|
+|[Theta](#Theta)|THEO/Theta| | |X|
+|[Vega](#Vega)|THEO/Vega| | |X|
 
 {: caption="Table 1. {{site.data.keyword.sia_full}} field name values" caption-side="top"}
 
@@ -156,7 +156,8 @@ In the case of derivative securities, Exposure will represent the price * quanti
 
 𝛤 = 𝜕2𝑉 / 𝜕𝑆2
 
-### <a id="Rho"></a>Rho
+<!-- ### <a id="Rho"></a>Rho -->
+### Rho
 {: #Rho}
 
 **Rho** is the rate of change of the price of an instrument to change in the underlying interest rate (discount factor), or the first derivative of the value with respect to the applicable interest rate.

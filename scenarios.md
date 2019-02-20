@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-08"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -41,10 +41,10 @@ scenario name in the `ibm-scenario-set-name` payload parameter.
 Standard shift scenarios are often required as part of financial regulation, as well as for internal risk management reporting.
 
 The following are the major types of standard shift scenario sets that are available to the user:
-* [Equity Standard Shift Scenarios](/docs/services/simulated-instrument-analytics/scenarios.html#eq)
-* [Interest Rate Standard Shift Scenarios](/docs/services/simulated-instrument-analytics/scenarios.html#ir)
-* [Credit Spread Standard Shift Scenarios](/docs/services/simulated-instrument-analytics/scenarios.html#cs)
-* [FX Standard Shift Scenarios](/docs/services/simulated-instrument-analytics/scenarios.html#fx)
+* [Equity Standard Shift Scenarios](#eq)
+* [Interest Rate Standard Shift Scenarios](#ir)
+* [Credit Spread Standard Shift Scenarios](#cs)
+* [FX Standard Shift Scenarios](#fx)
 
 <!--
 [Equity Standard Shift Scenarios](#eq)

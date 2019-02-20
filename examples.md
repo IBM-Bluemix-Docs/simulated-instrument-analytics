@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-08"
+lastupdated: "2019-02-21"
 
 ---
 <!--{:new_window: target="_blank"}-->
@@ -19,8 +19,8 @@ lastupdated: "2019-02-08"
 
 # Request examples
 
-These sample requests supplement the simple example provided in [Getting started with {{site.data.keyword.siminstruanalshort}}](/docs/services/simulated-instrument-analytics/index.html).
-<!--These sample requests supplement the simple example provided in [Getting started with {{site.data.keyword.siminstruanalshort}}](/docs/services/simulated-instrument-analytics?topic=simulated-instrument-analytics-getting_started_siminstruanalshort).-->
+<!-- These sample requests supplement the simple example provided in [Getting started with {{site.data.keyword.siminstruanalshort}}](/docs/services/simulated-instrument-analytics/index.html).-->
+These sample requests supplement the simple example provided in [Getting started with {{site.data.keyword.siminstruanalshort}}](/docs/services/simulated-instrument-analytics?topic=simulated-instrument-analytics-getting_started_siminstruanalshort).
 
 
 
