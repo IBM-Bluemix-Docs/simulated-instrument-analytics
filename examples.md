@@ -2,7 +2,13 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-04"
+
+keywords: financial risk, getting started
+
+subcollection: simulated-instrument-analytics
+
+
 
 ---
 <!--{:new_window: target="_blank"}-->
